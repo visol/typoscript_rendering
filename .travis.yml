@@ -22,6 +22,7 @@ notifications:
     - helmut@typo3.org
 
 before_script:
+  - php -r 'var_dump(defined('ZEND_THREAD_SAFE'));'
   - sudo apt-get install parallel
   - composer self-update
   - cd ..
